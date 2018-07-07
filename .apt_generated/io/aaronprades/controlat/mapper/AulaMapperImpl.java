@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-07-07T15:26:34+0200",
+    date = "2018-07-08T00:48:30+0200",
     comments = "version: 1.1.0.Final, compiler: Eclipse JDT (IDE) 3.13.100.v20171123-1049, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -38,7 +38,8 @@ public class AulaMapperImpl implements AulaMapper {
         Aula aula = new Aula();
 
         aula.setIdAula( aulaDTO.getIdAula() );
-        aula.setMax_alumnos( aulaDTO.getMax_alumnos() );
+        aula.setMaxAlumnos( aulaDTO.getMaxAlumnos() );
+        aula.setNumeroAula( aulaDTO.getNumeroAula() );
 
         return aula;
     }
@@ -52,7 +53,8 @@ public class AulaMapperImpl implements AulaMapper {
         AulaDTO aulaDTO_ = new AulaDTO();
 
         aulaDTO_.setIdAula( aula.getIdAula() );
-        aulaDTO_.setMax_alumnos( aula.getMax_alumnos() );
+        aulaDTO_.setMaxAlumnos( aula.getMaxAlumnos() );
+        aulaDTO_.setNumeroAula( aula.getNumeroAula() );
 
         return aulaDTO_;
     }

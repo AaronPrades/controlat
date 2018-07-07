@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html  xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <body>
 	<form id="formAula" class="form-horizontal" data-th-action="@{/aula}" data-th-object="${aulaForm}" data-th-method="POST">
 		<table>
@@ -10,10 +12,7 @@
 				</tr>	
 			</thead>
 			<tbody>
-				<tr data-th-if="not aulas.hasContent()">
-					<td colspan="2">No existe ningun registro</td>
-				</tr>
-				<tr data-th-each="aula : *{aulas}" data-th-if="*{aulas.hasContent()}"
+				<tr data-th-each="aula : *{aulas}"
 						data-th-attr="data-id=${aula.idAula}">
 					<td data-th-text="${aula.numeroAula}"></td>
 					<td data-th-text="${aula.maxAlumnos}"></td>	

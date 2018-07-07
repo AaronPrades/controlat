@@ -22,8 +22,8 @@ public class AulaDTO {
 	
 	@NotNull
 	@Length(max = 4)
-	private String numero_aula;
+	private String numeroAula;
 	
 	@NotNull
-	private Integer max_alumnos;
+	private Integer maxAlumnos;
 }

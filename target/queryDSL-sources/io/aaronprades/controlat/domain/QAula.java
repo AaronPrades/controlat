@@ -21,9 +21,9 @@ public class QAula extends EntityPathBase<Aula> {
 
     public final NumberPath<Integer> idAula = createNumber("idAula", Integer.class);
 
-    public final NumberPath<Integer> max_alumnos = createNumber("max_alumnos", Integer.class);
+    public final NumberPath<Integer> maxAlumnos = createNumber("maxAlumnos", Integer.class);
 
-    public final StringPath numero_clase = createString("numero_clase");
+    public final StringPath numeroAula = createString("numeroAula");
 
     public QAula(String variable) {
         super(Aula.class, forVariable(variable));

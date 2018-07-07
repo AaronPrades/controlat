@@ -1,5 +1,7 @@
 package io.aaronprades.controlat.form;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import io.aaronprades.controlat.dto.AulaDTO;
@@ -12,4 +14,5 @@ public class AulaForm extends BaseForm {
 	
 	@Valid
 	private AulaDTO aula;
+	private List<AulaDTO> aulas;
 }

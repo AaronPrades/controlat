@@ -40,10 +40,10 @@ public class Aula {
 	
 	@NotNull
 	@Length(max = 4)
-	@Column(name = "numero_clase")
-	private String numero_clase;
+	@Column(name = "numero_aula")
+	private String numeroAula;
 	
 	@NotNull
 	@Column(name = "max_alumnos")
-	private Integer max_alumnos;
+	private Integer maxAlumnos;
 }
