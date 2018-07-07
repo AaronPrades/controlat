@@ -1,9 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 	<meta charset="UTF-8" />
 </head>
 <body>
-	<p>Hola que tal?</p>
+	<button id="redirectAula">Ir a Aulas</button>
+	
+	<script data-th-src="@{/js/vendor/jquery-min.js}"></script>
+	<script data-th-src="@{/js/inicio/inicio.js}"></script>
 </body>
 </html>
