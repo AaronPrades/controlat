@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: controlat
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Aaron
+Implementation-Vendor-Id: io.aaronprades
+Build-Jdk: 1.8.0_171
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/controlat
+Created-By: Maven Integration for Eclipse
+
