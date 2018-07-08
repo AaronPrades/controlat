@@ -10,20 +10,20 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(of = { "idAula" })
-public class AulaDTO {
+@EqualsAndHashCode(of = { "idAsignatura" })
+public class AsignaturaDTO {
 
 	@NotNull
-	private Integer idAula;
+	private Integer idAsignatura;
 
 	@NotNull
-	@Length(max = 4)
-	private String numeroAula;
-
+	@Length(max = 40)
+	private String nombre;
+	
 	@NotNull
-	private Integer maxAlumnos;
+	private Integer horasPlanificadas;
 }

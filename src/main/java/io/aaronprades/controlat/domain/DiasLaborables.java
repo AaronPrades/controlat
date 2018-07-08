@@ -1,5 +1,7 @@
 package io.aaronprades.controlat.domain;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +11,6 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
-import org.hibernate.validator.constraints.Length;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,32 +19,28 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="crt_aula")
+@Table(name="crt_dias_laborables")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(of = {"idAula"})
-public class Aula {
+@EqualsAndHashCode(of = {"idDiasLaborables"})
+public class DiasLaborables {
 	
 	@Id
 	@GenericGenerator(
-			name = "aulaGenerator",
+			name = "diasLaborablesGenerator",
 			strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
 			parameters = {
-					@Parameter(name = "sequence_name", value = "aula_seq")
+					@Parameter(name = "sequence_name", value = "dias_seq")
 			}
 	)
-	@GeneratedValue(generator = "aulaGenerator")
-	@Column(name="id_aula", unique = true, nullable = false)
-	private Integer idAula;
+	@GeneratedValue(generator = "diasLaborablesGenerator")
+	@Column(name="id_dias_laborables", unique = true, nullable = false)
+	private Integer idDiasLaborables;
 	
 	@NotNull
-	@Length(max = 4)
-	@Column(name = "numero_aula")
-	private String numeroAula;
+	@Column(name = "fecha")
+	private Date fecha;
 	
-	@NotNull
-	@Column(name = "max_alumnos")
-	private Integer maxAlumnos;
 }

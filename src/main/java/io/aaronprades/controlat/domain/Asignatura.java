@@ -18,32 +18,32 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="crt_aula")
+@Table(name="crt_asignatura")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(of = {"idAula"})
-public class Aula {
+@EqualsAndHashCode(of = {"idAsignatura"})
+public class Asignatura {
 	
 	@Id
 	@GenericGenerator(
-			name = "aulaGenerator",
+			name = "asignaturaGenerator",
 			strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
 			parameters = {
-					@Parameter(name = "sequence_name", value = "aula_seq")
+					@Parameter(name = "sequence_name", value = "asig_seq")
 			}
 	)
-	@GeneratedValue(generator = "aulaGenerator")
-	@Column(name="id_aula", unique = true, nullable = false)
-	private Integer idAula;
+	@GeneratedValue(generator = "asignaturaGenerator")
+	@Column(name="id_asignatura", unique = true, nullable = false)
+	private Integer idAsignatura;
 	
 	@NotNull
-	@Length(max = 4)
-	@Column(name = "numero_aula")
-	private String numeroAula;
+	@Length(max = 40)
+	@Column(name = "nombre")
+	private String nombre;
 	
 	@NotNull
-	@Column(name = "max_alumnos")
-	private Integer maxAlumnos;
+	@Column(name = "horas_planificadas")
+	private Integer horasPlanificadas;
 }

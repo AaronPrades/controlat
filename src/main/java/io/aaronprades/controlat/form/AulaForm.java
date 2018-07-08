@@ -14,5 +14,6 @@ public class AulaForm extends BaseForm {
 	
 	@Valid
 	private AulaDTO aula;
+	
 	private List<AulaDTO> aulas;
 }
